@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Creator | Instant Docker-Based Automation</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon" style="background: #0ea5e9; padding: 30px;">
+                <img src="../../assets/icons/database_creator.svg" alt="Database Creator" style="width: 100%;">
+            </div>
+            <h1>Database Creator</h1>
+            <p>One-command Docker automation for developers. Quickly spin up Postgres, MySQL, Oracle, DB2, and SQL Server instances with pre-configured credentials and custom port mappings.</p>
+            <div class="hero-links">
+                <a href="https://github.com/ervivekumrao/DatabaseCreator" class="btn btn-primary" style="background: #0ea5e9;">View on GitHub</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Automation Mastery</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🐳 Docker Orchestration</h3>
+                    <p>Automates image pulling and container startup for clean, isolated development environments.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🏢 Multi-Engine</h3>
+                    <p>Supports a wide array of databases: PostgreSQL, MySQL, Oracle, IBM DB2, MongoDB, and SQL Server.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔌 Port Mapping</h3>
+                    <p>Easily map internal container ports to any host port to avoid conflicts with local services.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🧹 Cleanup Tools</h3>
+                    <p>Integrated troubleshooting scripts to prune unused volumes and images with a single command.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Developer Productivity Tools.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

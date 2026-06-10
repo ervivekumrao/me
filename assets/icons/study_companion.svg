@@ -1,0 +1,15 @@
+<svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+    <rect width="108" height="108" rx="20" fill="#6366f1"/>
+    <g transform="scale(0.65) translate(29, 29)">
+        <!-- Document Sheet -->
+        <path fill="#FFFFFF" d="M31,22 H64 L80,38 V82 C80,85 78,86 75,86 H31 C28,86 26,85 26,82 V27 C26,24 28,22 31,22 Z" />
+        <!-- Folded Corner -->
+        <path fill="#C5CAE9" d="M64,22 V38 H80 L64,22 Z" />
+        <!-- Text Lines -->
+        <path fill="#E8EAF6" d="M32,50 H64 V53 H32 Z M32,60 H64 V63 H32 Z M32,70 H50 V73 H32 Z" />
+        <!-- Timer Emblem -->
+        <circle cx="72" cy="72" r="14" fill="#3F51B5" />
+        <!-- Clock Hands -->
+        <path fill="#FFFFFF" d="M71,64 H73 V73 H80 V75 H71 V64 Z" />
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="bgGradient" cx="54" cy="54" r="54" gradientUnits="userSpaceOnUse">      
+            <stop offset="0" stop-color="#18181B"/>
+            <stop offset="1" stop-color="#09090B"/>
+        </radialGradient>
+    </defs>
+    <!-- Background -->
+    <rect width="108" height="108" fill="url(#bgGradient)"/>
+
+    <!-- Subtle Dot Grid -->
+    <g fill="#FFFFFF" fill-opacity="0.05">
+        <circle cx="20" cy="20" r="1"/> <circle cx="40" cy="20" r="1"/> <circle cx="60" cy="20" r="1"/> <circle cx="80" cy="20" r="1"/>
+        <circle cx="20" cy="40" r="1"/> <circle cx="40" cy="40" r="1"/> <circle cx="60" cy="40" r="1"/> <circle cx="80" cy="40" r="1"/>
+        <circle cx="20" cy="60" r="1"/> <circle cx="40" cy="60" r="1"/> <circle cx="60" cy="60" r="1"/> <circle cx="80" cy="60" r="1"/>
+        <circle cx="20" cy="80" r="1"/> <circle cx="40" cy="80" r="1"/> <circle cx="60" cy="80" r="1"/> <circle cx="80" cy="80" r="1"/>
+    </g>
+
+    <!-- Foreground Assets -->
+    <!-- Outer Hexagon Frame -->
+    <path fill="#059669" d="M54,20 L84,37 L84,71 L54,88 L24,71 L24,37 Z" />
+    <!-- Inner Highlight -->
+    <path fill="#10B981" d="M54,25 L79,39 L79,69 L54,83 L29,69 L29,39 Z" />
+    <!-- Stylized "M" -->
+    <path stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M35,65 V45 L54,58 L73,45 V65" />
+    <!-- Data Nodes -->
+    <circle cx="54" cy="32" r="3" fill="#A3E635" />
+    <circle cx="35" cy="75" r="2" fill="#2DD4BF" />
+    <circle cx="73" cy="75" r="2" fill="#2DD4BF" />
+</svg>

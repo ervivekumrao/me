@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runtime Compilation | Dynamic Java Code Execution</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon" style="background: #f43f5e; padding: 30px;">
+                <img src="../../assets/icons/runtime_compilation.svg" alt="Runtime Compilation" style="width: 100%;">
+            </div>
+            <h1>Runtime Compilation</h1>
+            <p>Push the boundaries of Java's flexibility. On-the-fly compile source strings into bytecode and load them into the JVM without a restart. Perfect for high-extensibility plugin architectures and dynamic rule engines.</p>
+            <div class="hero-links">
+                <a href="https://github.com/ervivekumrao/RuntimeCompile" class="btn btn-primary" style="background: #f43f5e;">View on GitHub</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Dynamic Capabilities</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>⚡ Live Compilation</h3>
+                    <p>Transform raw Java source code into executable bytecode instantly during application runtime.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📂 Dynamic Loading</h3>
+                    <p>Uses a custom ClassLoader to inject new classes into the running JVM for immediate instantiation.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔌 Plugin Architecture</h3>
+                    <p>Enables highly extensible core systems where new logic can be added without deployment downtime.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🐞 Developer Ready</h3>
+                    <p>Includes utility methods to inspect and debug dynamically loaded components within your IDE.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Advanced Java Developer Libraries.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

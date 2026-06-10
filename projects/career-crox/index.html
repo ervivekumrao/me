@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Crox | Immersive Recruitment Companion</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon">
+                <img src="../../assets/icons/career_crox.png" alt="Career Crox" style="width: 100%;">
+            </div>
+            <h1>Career Crox – Calling Assistant</h1>
+            <p>Supercharge your recruitment workflow with smart calling automation. Seamlessly sync with Career Crox CRM to manage, track, and close candidates faster.</p>
+            <div class="hero-links">
+                <a href="https://play.google.com/store/apps/details?id=com.careercrox.callingassistant" class="btn btn-primary" target="_blank">Download Play Store</a>
+                <a href="https://ervivekumrao.github.io/Career-Crox-Calling-Assistant/" class="btn btn-secondary" target="_blank">Official Site</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Engineered for Speed</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🚀 Smart Calling</h3>
+                    <p>Automated dialing sequence with a configurable countdown. Stay focused while the app handles the queue.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📊 Live Analytics</h3>
+                    <p>Track Dialed, Connected, and Talktime metrics live. Built-in AHT (Average Handling Time) calculation.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔄 CRM Integration</h3>
+                    <p>One-tap synchronization of calling lists and logs. All outcomes are instantly pushed to your CRM.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>💬 One-Tap WhatsApp</h3>
+                    <p>Reach candidates on WhatsApp instantly without saving temporary contacts on your personal device.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2 class="section-title" data-reveal>The Experience</h2>
+            <div class="steps-container">
+                <div class="step-item" data-reveal>
+                    <h3>01. Secure Device Pairing</h3>
+                    <p>Link your mobile device to your desktop CRM using a secure, encrypted 6-digit session code.</p>
+                </div>
+                <div class="step-item" data-reveal>
+                    <h3>02. Dynamic Queue Sync</h3>
+                    <p>Pull assigned candidate lists instantly. Preview resumes and notes before starting your outreach sequence.</p>
+                </div>
+                <div class="step-item" data-reveal>
+                    <h3>03. Automated Engagement</h3>
+                    <p>Initiate the sequence and let the app handle the dialing. Log outcomes with professional presets for instant CRM updates.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Premium Recruitment Solutions.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

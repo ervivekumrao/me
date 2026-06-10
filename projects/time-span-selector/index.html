@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Span Selector | Elegant UI Library for Android</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon" style="background: #8b5cf6; padding: 30px;">
+                <img src="../../assets/icons/time_span_selector.svg" alt="Time Span Selector" style="width: 100%;">
+            </div>
+            <h1>Time Span Selector</h1>
+            <p>A highly customizable and elegant Time Span Selector library for Android. Built with Material 3 principles, offering both Radial (Clock) and Linear selectors for seamless time range input.</p>
+            <div class="hero-links">
+                <a href="https://github.com/ervivekumrao/TimeSpanSelectorView" class="btn btn-primary" style="background: #8b5cf6;">View on GitHub</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Library Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🕒 Radial & Linear</h3>
+                    <p>Choose between classic clock-style circular selectors or modern linear range sliders to fit your UI needs.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🌙 Overnight Handling</h3>
+                    <p>Built-in logic to seamlessly select and display time ranges that cross the midnight threshold.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🎨 Total Customization</h3>
+                    <p>Modify colors, widths, thumb styles, and interval snapping (1, 5, 15, or 30 mins) via XML or Kotlin.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📱 Material 3 Ready</h3>
+                    <p>Designed for the latest Android design standards with support for dynamic theming and fluid gestures.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Android Developer Libraries.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

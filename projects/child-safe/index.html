@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChildSafe | Premium Parental Control Suite</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon">
+                <img src="../../assets/icons/child_safe.png" alt="Child Safe" style="width: 100%;">
+            </div>
+            <h1>Parental Control Child Safe</h1>
+            <p>Master your child's digital safety with radar-precision tracking, intelligent app governance, and high-security kiosk modes designed for the modern family.</p>
+            <div class="hero-links">
+                <a href="https://play.google.com/store/apps/details?id=control.child.device" class="btn btn-primary" style="background: #ef4444;">Download Play Store</a>
+                <a href="https://ervivekumrao.github.io/ChildSafe/index.html#dashboard" class="btn btn-secondary" target="_blank">Official Dashboard</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Safety Infrastructure</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>📡 Radar Tracking</h3>
+                    <p>Live GPS location with historical breadcrumbs and geofencing. Know exactly where they are at all times.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📊 Deep Insights</h3>
+                    <p>Comprehensive usage reports covering app time, web history, and device health status.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🚫 Remote Blocking</h3>
+                    <p>Instantly suspend distracting apps or set recurring daily/weekly schedules for healthy balance.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🛡️ Anti-Tamper</h3>
+                    <p>Device Owner enrollment prevents unauthorized resets, uninstalls, or clearing of management policies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2 class="section-title" data-reveal>The Setup</h2>
+            <div class="steps-container">
+                <div class="step-item" data-reveal>
+                    <h3>01. Core Installation</h3>
+                    <p>Deploy ChildSafe to the device and follow the configuration wizard to activate management services.</p>
+                </div>
+                <div class="step-item" data-reveal>
+                    <h3>02. Admin Provisioning</h3>
+                    <p>Leverage the "Secret Scanner" mode for deep system-level control via Device Owner enrollment.</p>
+                </div>
+                <div class="step-item" data-reveal>
+                    <h3>03. Dashboard Mastery</h3>
+                    <p>Log into the Parent Cloud to monitor activities, set limits, and track locations in real-time from any browser.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Security & Family Solutions.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

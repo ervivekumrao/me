@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup Master | Professional Mock Data Injection</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon" style="background: #18181b;">
+                <img src="../../assets/icons/mockup_master.svg" alt="Mockup Master" style="width: 100%;">
+            </div>
+            <h1>Mockup Master: Dev Tool</h1>
+            <p>The ultimate utility for Android developers and QA engineers. Instantly populate any device with realistic, high-quality mock data for edge-case testing and demo preparation.</p>
+            <div class="hero-links">
+                <a href="https://play.google.com/store/apps/details?id=com.vivekumrao.mockupmaster" class="btn btn-primary" style="background: #10b981;">Play Store</a>
+                <a href="https://ervivekumrao.github.io/MockupMaster/" class="btn btn-secondary" target="_blank">Official Site</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Powerful Injections</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>👤 Rich Contacts</h3>
+                    <p>Generate thousands of contacts with avatars, multi-line numbers, and diverse metadata formats.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>💬 SMS Simulation</h3>
+                    <p>Create deep message threads with varying states: Sent, Received, Draft, and MMS attachments.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📞 Call Log Population</h3>
+                    <p>Inject realistic call history including incoming, missed, and blocked events with randomized durations.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🧹 Smart Cleanup</h3>
+                    <p>Track and remove only the mock data created by the tool, leaving your personal data untouched.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2 class="section-title" data-reveal>Workflow</h2>
+            <div class="steps-container">
+                <div class="step-item" data-reveal>
+                    <h3>01. Authorization</h3>
+                    <p>Grant temporary system permissions for Contacts and SMS. Use the "Default App" toggle for deep SMS injection.</p>
+                </div>
+                <div class="step-item" data-reveal>
+                    <h3>02. Configuration</h3>
+                    <p>Select your dataset size and parameters. Use pre-defined "Stress Test" profiles for high-volume scenarios.</p>
+                </div>
+                <div class="step-item" data-reveal>
+                    <h3>03. Execution</h3>
+                    <p>Watch the real-time population of your device. Once finished, export your custom datasets for team-wide use.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Developer Utilities Portfolio.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

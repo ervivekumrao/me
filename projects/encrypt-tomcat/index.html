@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomcat Pool Encryptor | Secure Java Infrastructure</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon" style="background: #14b8a6; padding: 30px;">
+                <img src="../../assets/icons/encrypt_tomcat.svg" alt="Tomcat Encryptor" style="width: 100%;">
+            </div>
+            <h1>Tomcat Pool Encryptor</h1>
+            <p>Harden your server security by encrypting sensitive database credentials (username, password, JDBC URL) in Tomcat configuration files. Features automatic runtime decryption for both DBCP2 and JDBC pools.</p>
+            <div class="hero-links">
+                <a href="https://github.com/ervivekumrao/EncryptTomcatConnectionPool" class="btn btn-primary" style="background: #14b8a6;">View on GitHub</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Infrastructure Security</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔐 Attribute Security</h3>
+                    <p>Encrypt almost all database resource attributes, ensuring no plain-text credentials exist in <code>server.xml</code> or <code>context.xml</code>.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔄 Transparent Decryption</h3>
+                    <p>Custom factories automatically decrypt values at runtime, requiring zero changes to your Java application code.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🏢 Enterprise Support</h3>
+                    <p>Fully compatible with standard Tomcat JDBC and DBCP2 connection pools used in high-load production environments.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🛠️ Setup CLI</h3>
+                    <p>Includes a dedicated command-line utility to manually encrypt and test your credential strings during server setup.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Enterprise Infrastructure Utilities.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

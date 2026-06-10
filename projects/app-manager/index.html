@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Manager | Enterprise System Utility</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon">
+                <img src="../../assets/icons/app_manager.png" alt="App Manager" style="width: 100%;">
+            </div>
+            <h1>App Manager</h1>
+            <p>A high-security enterprise management tool. Control bloatware, enforce strict password policies, and manage hardware restrictions across your Android fleet.</p>
+            <div class="hero-links">
+                <a href="https://play.google.com/store/apps/details?id=com.my.admin.app" class="btn btn-primary" style="background: #4b5563;">Play Store</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Core Capabilities</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🏢 Enterprise Admin</h3>
+                    <p>Leverage Device Owner and Admin permissions for deep system integration and management.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🚫 Bloatware Freeze</h3>
+                    <p>Disable pre-installed system apps without uninstallation, optimizing RAM and battery life.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔐 Policy Engine</h3>
+                    <p>Enforce complex password rules, hardware disabling (camera/mic), and auto-wipe protocols.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📲 QR Provisioning</h3>
+                    <p>Streamline fleet deployment with automated QR-based enrollment for Device Owner status.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Enterprise System Solutions.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

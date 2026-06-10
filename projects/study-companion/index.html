@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Companion | AI-Driven Educational Assistant</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon">
+                <img src="../../assets/icons/study_companion.svg" alt="Study Companion" style="width: 100%;">
+            </div>
+            <h1>Study Companion 🎓</h1>
+            <p>Empower your learning with AI. Convert physical textbooks into interactive digital study materials using cutting-edge OCR and personalized content generation.</p>
+            <div class="hero-links">
+                <a href="https://play.google.com/store/apps/details?id=study.companion" class="btn btn-primary" style="background: #6366f1;">Play Store</a>
+                <a href="https://github.com/ervivekumrao/StudyCompanion" class="btn btn-secondary" target="_blank">View Repository</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Intelligent Learning</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🔍 Precision OCR</h3>
+                    <p>Extract text from photos of textbooks or handwritten notes with high accuracy using Google ML Kit.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>🤖 AI Question Gen</h3>
+                    <p>Instantly generate practice quizzes (MCQs, Essay, Short Answer) directly from your scanned materials.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📝 Auto-Flashcards</h3>
+                    <p>Convert your notes into Leitner-style flashcards for active recall and spaced repetition study.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📈 Analytics</h3>
+                    <p>Track your study streaks, XP progress, and identifies knowledge gaps with an intuitive dashboard.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. AI & Education Innovation.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

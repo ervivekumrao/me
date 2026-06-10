@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Time | Automated Attendance Tracker</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Portfolio</a>
+            <a href="privacy.html" class="btn btn-secondary">Privacy</a>
+        </nav>
+
+        <header class="project-hero" data-reveal>
+            <div class="project-hero-icon">
+                <img src="../../assets/icons/office_time.png" alt="Office Time" style="width: 100%;">
+            </div>
+            <h1>Office Time Counter</h1>
+            <p>Smarter time tracking for the modern workplace. Automatically monitor your "In" and "Out" times through intelligent notification hooks and stay optimized with real-time pending hour calculations.</p>
+            <div class="hero-links">
+                <a href="https://play.google.com/store/apps/details?id=office.time.counter" class="btn btn-primary" style="background: #f59e0b;">Play Store</a>
+            </div>
+        </header>
+
+        <section id="features">
+            <h2 class="section-title" data-reveal>Effortless Logs</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal>
+                    <h3>🕒 Auto-Capture</h3>
+                    <p>Uses notification hooks to automatically log arrival and departure times without manual app entry.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📊 Real-Time Delta</h3>
+                    <p>Instantly calculates exactly how many hours you've worked and how many are pending for the day/week.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>📅 Smart History</h3>
+                    <p>A beautifully structured monthly view of your work patterns, helping you stay organized and accountable.</p>
+                </div>
+                <div class="feature-card glass" data-reveal>
+                    <h3>✏️ Manual Flex</h3>
+                    <p>Easily add Half-Day or Full-Day adjustments for remote work or missed system notifications.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Vivek Umrao. Productivity & Utility Portfolio.</p>
+        </footer>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
