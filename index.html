@@ -1,3 +1,4 @@
+<!-- Copyright 2025 Vivek Umrao -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,15 @@
 </head>
 <body>
     <div class="container">
+        <nav class="top-nav" data-reveal>
+            <div class="nav-logo">VIVEK UMRAO</div>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#expertise" class="nav-back">Expertise</a>
+                <a href="#projects" class="nav-back">Projects</a>
+            </div>
+            <a href="https://github.com/ervivekumrao" class="btn btn-secondary" target="_blank" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">GitHub</a>
+        </nav>
+
         <header class="hero" data-reveal>
             <div class="profile-container">
                 <img src="assets/profile.jpg" alt="Vivek Umrao" class="profile-img">
@@ -40,6 +50,15 @@
         <section id="projects">
             <h2 class="section-title">Featured Projects</h2>
             <div class="bento-grid">
+                <!-- Child Safe - Large (Feature) -->
+                <a href="projects/child-safe/index.html" class="bento-item large glass" data-reveal>
+                    <img src="assets/icons/child_safe.png" alt="Child Safe" class="bento-icon">
+                    <div class="bento-content">
+                        <h3>Child Safe</h3>
+                        <p>Advanced parental monitoring with radar-precision tracking and deep system governance.</p>
+                    </div>
+                </a>
+
                 <!-- Career Crox - Wide -->
                 <a href="projects/career-crox/index.html" class="bento-item wide glass" data-reveal>
                     <img src="assets/icons/career_crox.png" alt="Career Crox" class="bento-icon">
@@ -58,39 +77,12 @@
                     </div>
                 </a>
 
-                <!-- Study Companion - Standard -->
-                <a href="projects/study-companion/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/study_companion.svg" alt="Study Companion" class="bento-icon">
+                <!-- Med Reminder - Standard -->
+                <a href="projects/med-reminder/index.html" class="bento-item glass" data-reveal>
+                    <img src="assets/icons/med_reminder.png" alt="Med Reminder" class="bento-icon" style="border-radius: 16px;">
                     <div class="bento-content">
-                        <h3>Study Companion</h3>
-                        <p>AI-driven OCR and intelligent study set generator.</p>
-                    </div>
-                </a>
-
-                <!-- Child Safe - Wide -->
-                <a href="projects/child-safe/index.html" class="bento-item wide glass" data-reveal>
-                    <img src="assets/icons/child_safe.png" alt="Child Safe" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Child Safe</h3>
-                        <p>Advanced parental monitoring with radar-precision tracking.</p>
-                    </div>
-                </a>
-
-                <!-- App Manager - Standard -->
-                <a href="projects/app-manager/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/app_manager.png" alt="App Manager" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>App Manager</h3>
-                        <p>Device policy enforcement and bloatware control utility.</p>
-                    </div>
-                </a>
-
-                <!-- Database Creator - Standard -->
-                <a href="projects/database-creator/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/database_creator.svg" alt="Database Creator" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>DB Creator</h3>
-                        <p>Automated Docker-based database orchestration.</p>
+                        <h3>Med Reminder</h3>
+                        <p>Intelligent health companion with smart schedules.</p>
                     </div>
                 </a>
 
@@ -103,12 +95,48 @@
                     </div>
                 </a>
 
+                <!-- App Manager - Standard -->
+                <a href="projects/app-manager/index.html" class="bento-item glass" data-reveal>
+                    <img src="assets/icons/app_manager.png" alt="App Manager" class="bento-icon">
+                    <div class="bento-content">
+                        <h3>App Manager</h3>
+                        <p>Device policy enforcement and bloatware control.</p>
+                    </div>
+                </a>
+
+                <!-- Study Companion - Wide -->
+                <a href="projects/study-companion/index.html" class="bento-item wide glass" data-reveal>
+                    <img src="assets/icons/study_companion.svg" alt="Study Companion" class="bento-icon">
+                    <div class="bento-content">
+                        <h3>Study Companion</h3>
+                        <p>AI-driven OCR and intelligent study set generator.</p>
+                    </div>
+                </a>
+
                 <!-- Office Time - Standard -->
                 <a href="projects/office-time-counter/index.html" class="bento-item glass" data-reveal>
                     <img src="assets/icons/office_time.png" alt="Office Time" class="bento-icon">
                     <div class="bento-content">
                         <h3>Office Time</h3>
                         <p>Background attendance tracking via notification hooks.</p>
+                    </div>
+                </a>
+
+                <!-- Database Creator - Standard -->
+                <a href="projects/database-creator/index.html" class="bento-item glass" data-reveal>
+                    <img src="assets/icons/database_creator.svg" alt="Database Creator" class="bento-icon">
+                    <div class="bento-content">
+                        <h3>DB Creator</h3>
+                        <p>Automated Docker-based database orchestration.</p>
+                    </div>
+                </a>
+
+                <!-- Runtime Compilation - Wide -->
+                <a href="projects/runtime-compilation/index.html" class="bento-item wide glass" data-reveal>
+                    <img src="assets/icons/runtime_compilation.svg" alt="Runtime Compilation" class="bento-icon">
+                    <div class="bento-content">
+                        <h3>Runtime Compile</h3>
+                        <p>Dynamic Java code execution and class-loading library.</p>
                     </div>
                 </a>
 
@@ -120,20 +148,20 @@
                         <p>Security utility for connection pool credential safety.</p>
                     </div>
                 </a>
-
-                <!-- Runtime Compilation - Standard -->
-                <a href="projects/runtime-compilation/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/runtime_compilation.svg" alt="Runtime Compilation" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Runtime Compile</h3>
-                        <p>Dynamic Java code execution and class-loading library.</p>
-                    </div>
-                </a>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 Vivek Umrao. Built with Precision & Premium Aesthetics.</p>
+            <div class="footer-tagline">
+                Handcrafted by <span class="highlight">Vivek Umrao</span>
+            </div>
+            <div class="footer-meta">
+                <span>© 2025 Vivek Umrao</span>
+                <span class="dot">•</span>
+                <span>Software Engineer</span>
+                <span class="dot">•</span>
+                <span>India</span>
+            </div>
         </footer>
     </div>
 

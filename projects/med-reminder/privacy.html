@@ -1,0 +1,264 @@
+<!-- Copyright 2025 Vivek Umrao -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Med Reminder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00897B;
+            --primary-soft: rgba(0, 137, 123, 0.08);
+            --secondary: #263238;
+            --bg: #F5F7F7;
+            --surface: #FFFFFF;
+            --text-main: #191C1C;
+            --text-muted: #455A64;
+            --border: #CFD8DC;
+            --glass: rgba(255, 255, 255, 0.9);
+            --radius-lg: 32px;
+            --shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0B1011;
+                --surface: #131A1B;
+                --text-main: #E0E3E1;
+                --text-muted: #90A4AE;
+                --border: #263238;
+                --glass: rgba(19, 26, 27, 0.9);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 140px 24px 80px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+            max-width: 850px;
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 14px 28px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo svg {
+            height: 28px;
+            width: 28px;
+            fill: var(--primary);
+        }
+        .logo .brand-highlight { color: var(--primary); }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 24px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .policy-card {
+            background: var(--surface);
+            padding: 60px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -2.5px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+        .header h1 span {
+            background: linear-gradient(135deg, var(--primary), #0D9488);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .effective-date {
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 48px 0 20px;
+            color: var(--text-main);
+            letter-spacing: -0.8px;
+        }
+
+        .highlight-box {
+            background: var(--primary-soft);
+            border-left: 5px solid var(--primary);
+            padding: 30px;
+            border-radius: 0 20px 20px 0;
+            margin: 40px 0;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .data-badge {
+            display: inline-block;
+            background: #CCFBF1;
+            color: #115E59;
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .data-badge { background: #115E59; color: #CCFBF1; }
+        }
+
+        p { margin-bottom: 1.6rem; color: var(--text-main); opacity: 0.9; }
+        ul { margin-bottom: 1.6rem; padding-left: 20px; }
+        li { margin-bottom: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .policy-card { padding: 40px 24px; }
+            .header h1 { font-size: 2.2rem; }
+            body { padding-top: 110px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Clock (Back) -->
+                <circle cx="21" cy="18" r="9" fill="white" stroke="var(--primary)" stroke-width="1.5"/>
+                <path d="M21 13V18L24 20" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Capsule (Front) -->
+                <rect x="5" y="4" width="10" height="24" rx="5" fill="var(--primary)"/>
+                <path d="M5 16H15V23C15 25.76 12.76 28 10 28C7.24 28 5 25.76 5 23V16Z" fill="white" fill-opacity="0.2"/>
+                <path d="M5 16L7 16L8 14L10 18L12 15L13 16L15 16" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="brand-text">Med<span class="brand-highlight">Reminder</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="../../index.html">Portfolio</a>
+            <a href="index.html">User Guide</a>
+            <a href="mailto:support@medreminder.com">Contact Support</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="policy-card">
+            <div class="header">
+                <h1>Privacy <span>Commitment.</span></h1>
+                <p class="effective-date">Last Updated: March 05, 2025</p>
+            </div>
+
+            <p>At <strong>Med Reminder</strong>, your health data is your most private asset. We are committed to protecting it with the highest standards of security and transparency.</p>
+
+            <div class="highlight-box">
+                Med Reminder is built with a local-first approach. Most of your data stays on your device, and we never sell your personal or health information to third parties.
+            </div>
+
+            <h2>1. Information We Collect</h2>
+            <p>To provide a functional and reliable reminder service, we manage the following types of data:</p>
+
+            <span class="data-badge">Local Health Data</span>
+            <p>Medication names, dosages, and schedules are stored locally on your device using a secure database. This data is used to trigger reminders and track your adherence history.</p>
+
+            <span class="data-badge">User Profiles</span>
+            <p>If you create profiles for family members, the names and icons associated with these profiles are stored locally to personalize the app experience.</p>
+
+            <span class="data-badge">Notification Data</span>
+            <p>The app uses the Android Alarm Manager and Notification service to provide timely alerts. These services process time and medication labels to show you the right information at the right time.</p>
+
+            <h2>2. Permissions and Their Use</h2>
+            <p>Med Reminder requires certain permissions to function effectively:</p>
+            <ul>
+                <li><strong>Exact Alarm Permission:</strong> Needed to trigger medication reminders at the precise time specified.</li>
+                <li><strong>Notification Permission:</strong> Essential for displaying reminders and quick actions (Taken, Skip, Snooze) on your lock screen.</li>
+                <li><strong>Post-Reboot Execution:</strong> Allows the app to reschedule your alarms automatically after your device restarts.</li>
+            </ul>
+
+            <h2>3. Data Security</h2>
+            <p>We implement industry-standard security measures to protect your data. Since the majority of your data is stored locally, its security also depends on your device's overall security (e.g., screen locks, encryption).</p>
+
+            <h2>4. Third-Party Services</h2>
+            <p>We may use minimal third-party tools for crash reporting and app performance monitoring to ensure the app remains reliable. These tools do not collect your personal health information.</p>
+
+            <h2>5. Your Rights</h2>
+            <p>You have full control over your data. You can edit or delete any medication or profile at any time within the app. Clearing the app's data in your device settings will permanently remove all locally stored health information.</p>
+
+            <h2>6. Changes to This Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:support@medreminder.com" style="color: var(--primary); font-weight: 700; text-decoration: none;">support@medreminder.com</a>.</p>
+        </div>
+
+        <footer>
+            <p>Copyright © 2025 Vivek Umrao. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
