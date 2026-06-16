@@ -5,529 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Med Reminder | Your Intelligent Health Companion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
     <style>
         :root {
             --primary: #00897B;
-            --primary-dark: #00695C;
-            --primary-soft: rgba(0, 137, 123, 0.08);
-            --secondary: #263238;
-            --accent: #D81B60;
-            --bg: #F5F7F7;
-            --surface: #FFFFFF;
-            --text-main: #191C1C;
-            --text-muted: #455A64;
-            --border: #CFD8DC;
-            --glass: rgba(255, 255, 255, 0.9);
-            --radius-lg: 32px;
-            --radius-md: 20px;
-            --shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
-            --shadow-xl: 0 30px 60px -12px rgba(0,0,0,0.12);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0B1011;
-                --surface: #131A1B;
-                --text-main: #E0E3E1;
-                --text-muted: #90A4AE;
-                --border: #263238;
-                --glass: rgba(19, 26, 27, 0.9);
-                --primary-soft: rgba(77, 182, 172, 0.12);
-                --shadow: 0 10px 40px -10px rgba(0,0,0,0.3);
-            }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        .navbar {
-            position: fixed;
-            top: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 48px);
-            max-width: 1000px;
-            background: var(--glass);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 14px 28px;
-            border-radius: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.3rem;
-            color: var(--text-main);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo svg {
-            height: 32px;
-            width: 32px;
-            fill: var(--primary);
-        }
-        .logo .brand-highlight { color: var(--primary); }
-
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-        .nav-links a:hover { color: var(--primary); }
-
-        .hero {
-            padding: 180px 24px 80px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -150px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 600px;
-            background: radial-gradient(circle, var(--primary-soft) 0%, transparent 70%);
-            z-index: -1;
-            filter: blur(80px);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.8rem, 8vw, 5rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -4px;
-        }
-        .hero h1 em {
-            font-style: normal;
-            background: linear-gradient(135deg, var(--primary), #4DB6AC);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.35rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 48px;
-            font-weight: 500;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px 100px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-            margin-top: 80px;
-        }
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            margin-bottom: 16px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 28px;
-            margin-bottom: 60px;
-        }
-
-        .card {
-            background: var(--surface);
-            padding: 48px;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-        .card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--primary);
-        }
-
-        .card-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--primary-soft);
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 24px;
-            color: var(--primary);
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-        .feature-list li {
-            padding-left: 28px;
-            position: relative;
-            margin-bottom: 12px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .graphic-container {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary-soft), transparent);
-            border-radius: var(--radius-md);
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-        .graphic-container svg {
-            width: 80%;
-            height: 80%;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05));
-        }
-
-        .setup-wrapper {
-            background: var(--surface);
-            border-radius: var(--radius-lg);
-            padding: 60px;
-            border: 1px solid var(--border);
-            margin-bottom: 80px;
-        }
-
-        .step-row {
-            display: flex;
-            gap: 32px;
-            margin-bottom: 48px;
-            position: relative;
-        }
-        .step-row:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            left: 24px;
-            top: 60px;
-            bottom: -40px;
-            width: 2px;
-            background: var(--border);
-        }
-
-        .step-badge {
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            flex-shrink: 0;
-            z-index: 1;
-        }
-
-        .step-content h4 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .step-content p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 80px 24px;
-            background: var(--surface);
-            border-top: 1px solid var(--border);
-        }
-        .footer-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-        }
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        .footer-links a:hover { color: var(--primary); }
-
-        [data-reveal] {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-        [data-reveal].visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-            .navbar { top: 16px; width: calc(100% - 32px); }
-            .nav-links { display: none; }
-            .hero { padding-top: 140px; }
-            .grid { grid-template-columns: 1fr; }
-            .setup-wrapper { padding: 30px; }
+            --primary-glow: rgba(0, 137, 123, 0.4);
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="nav-back"><span>&larr;</span> Back to Portfolio</a>
+            <div class="nav-logo">Med Reminder</div>
+            <a href="privacy.html" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Privacy Policy</a>
+        </nav>
 
-    <nav class="navbar">
-        <a href="index.html" class="logo">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Clock (Back) -->
-                <circle cx="21" cy="18" r="9" fill="white" stroke="var(--primary)" stroke-width="1.5"/>
-                <path d="M21 13V18L24 20" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Capsule (Front) -->
-                <rect x="5" y="4" width="10" height="24" rx="5" fill="var(--primary)"/>
-                <path d="M5 16H15V23C15 25.76 12.76 28 10 28C7.24 28 5 25.76 5 23V16Z" fill="white" fill-opacity="0.2"/>
-                <path d="M5 16L7 16L8 14L10 18L12 15L13 16L15 16" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="brand-text">Med<span class="brand-highlight">Reminder</span></span>
-        </a>
-        <div class="nav-links">
-            <a href="../../index.html">Portfolio</a>
-            <a href="#features">Features</a>
-            <a href="#usage">Usage</a>
-            <a href="#setup">Setup</a>
-            <a href="privacy.html">Privacy</a>
-        </div>
-    </nav>
+        <header class="project-hero" data-reveal>
+            <div class="feature-graphic-container">
+                <img src="../../assets/graphics/med_reminder_fg.png" alt="Med Reminder Feature Graphic">
+            </div>
 
-    <header class="hero">
-        <h1 data-reveal>Your Health, <em>Simplified.</em></h1>
-        <p data-reveal>Never miss a dose again. Manage medications for you and your family with our intelligent reminder system.</p>
-    </header>
+            <div class="project-hero-icon" style="background: white;">
+                <img src="../../assets/icons/med_reminder.png" alt="Med Reminder Icon">
+            </div>
 
-    <main class="container">
+            <h1>Intelligent Health Companion</h1>
+            <p>Never miss a dose again. Manage medications for you and your family with our modern reminder system featuring OCR label scanning and biometric security.</p>
 
-        <!-- Section: Features -->
-        <div id="features" class="section-header" data-reveal>
-            <h2>Core Features</h2>
-            <p>Designed to provide peace of mind and better health outcomes.</p>
-        </div>
-        <div class="grid">
-            <div class="card" data-reveal>
-                <div class="graphic-container">
-                    <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background Decorative Element -->
-                        <rect x="40" y="30" width="120" height="90" rx="20" fill="var(--primary-soft)" transform="rotate(-5 100 75)" />
+            <div class="hero-links">
+                <a href="#" class="btn btn-primary" style="background: #00897B;">
+                    Play Store Coming Soon
+                </a>
+            </div>
+        </header>
 
-                        <!-- Main Calendar Card -->
-                        <rect x="55" y="40" width="90" height="80" rx="12" fill="var(--surface)" stroke="var(--border)" stroke-width="1" style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));" />
+        <section id="features">
+            <div style="text-align: center; margin-bottom: 3rem;" data-reveal>
+                <h2 class="section-title">Health Intelligence</h2>
+                <p style="color: var(--text-muted);">Designed for clinical accuracy with a human touch.</p>
+            </div>
 
-                        <!-- Calendar Header -->
-                        <path d="M55 52 C 55 44, 145 44, 145 52 V 60 H 55 V 52 Z" fill="var(--primary)" />
-                        <rect x="65" y="48" width="15" height="4" rx="2" fill="white" opacity="0.8" />
-
-                        <!-- Calendar Grid Dots -->
-                        <g fill="var(--border)" opacity="0.6">
-                            <circle cx="70" cy="75" r="3" /> <circle cx="85" cy="75" r="3" /> <circle cx="100" cy="75" r="3" /> <circle cx="115" cy="75" r="3" /> <circle cx="130" cy="75" r="3" />
-                            <circle cx="70" cy="90" r="3" /> <circle cx="85" cy="90" r="3" /> <circle cx="100" cy="90" r="3" fill="var(--primary)" opacity="1" /> <circle cx="115" cy="90" r="3" /> <circle cx="130" cy="90" r="3" />
-                            <circle cx="70" cy="105" r="3" /> <circle cx="85" cy="105" r="3" /> <circle cx="100" cy="105" r="3" /> <circle cx="115" cy="105" r="3" /> <circle cx="130" cy="105" r="3" />
-                        </g>
-
-                        <!-- Floating Pill (Capsule) -->
-                        <g transform="translate(135, 110) rotate(-35)">
-                            <rect x="-15" y="-6" width="30" height="12" rx="6" fill="var(--accent)" style="filter: drop-shadow(0 4px 8px rgba(244,63,94,0.3));" />
-                            <path d="M0 -6 H 9 A 6 6 0 0 1 9 6 H 0 V -6 Z" fill="white" opacity="0.9" />
-                        </g>
-
-                        <!-- Time Badge -->
-                        <rect x="40" y="85" width="45" height="20" rx="10" fill="var(--secondary)" style="filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));" />
-                        <text x="62.5" y="99" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="white">09:00 AM</text>
-                    </svg>
+            <div class="feature-grid">
+                <div class="feature-card glass" data-reveal style="--primary: #00897B;">
+                    <span style="font-size: 3rem; margin-bottom: 1.5rem; display: block;">📅</span>
+                    <h3>Smart Scheduling</h3>
+                    <p>Easily add medications with specific dosages, frequencies, and recurring intervals. Handles everything from antibiotics to chronic prescriptions.</p>
                 </div>
-                <div class="card-icon">📅</div>
-                <h3>Smart Schedules</h3>
-                <ul class="feature-list">
-                    <li><strong>Flexible Timing:</strong> Set daily, weekly, or specific interval reminders.</li>
-                    <li><strong>Dosage Tracking:</strong> Precisely log how much you need to take.</li>
-                    <li><strong>Course Duration:</strong> Manage short-term antibiotics or long-term treatments.</li>
-                </ul>
-            </div>
-            <div class="card" data-reveal>
-                <div class="graphic-container">
-                    <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="75" r="35" fill="var(--primary-soft)" />
-                        <circle cx="100" cy="65" r="12" fill="var(--primary)" />
-                        <path d="M75 100 C 75 85, 125 85, 125 100" fill="var(--primary)" />
-
-                        <circle cx="60" cy="85" r="25" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-                        <circle cx="60" cy="80" r="8" fill="var(--text-muted)" opacity="0.5" />
-                        <path d="M45 100 C 45 92, 75 92, 75 100" fill="var(--text-muted)" opacity="0.5" />
-
-                        <circle cx="140" cy="85" r="25" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-                        <circle cx="140" cy="80" r="8" fill="var(--accent)" opacity="0.6" />
-                        <path d="M125 100 C 125 92, 155 92, 155 100" fill="var(--accent)" opacity="0.6" />
-                    </svg>
+                <div class="feature-card glass" data-reveal style="--primary: #D81B60;">
+                    <span style="font-size: 3rem; margin-bottom: 1.5rem; display: block;">📷</span>
+                    <h3>OCR Label Scanning</h3>
+                    <p>Point your camera at the medication label. Our AI-driven OCR (ML Kit) extracts names and schedules automatically for error-free entry.</p>
                 </div>
-                <div class="card-icon">👨‍👩‍👧‍👦</div>
-                <h3>Family Profiles</h3>
-                <ul class="feature-list">
-                    <li><strong>Multi-User Support:</strong> Create separate profiles for kids, parents, or elderly.</li>
-                    <li><strong>Centralized View:</strong> Monitor everyone's health from a single dashboard.</li>
-                    <li><strong>Custom Avatars:</strong> Easily distinguish between profiles with icons.</li>
-                </ul>
-            </div>
-            <div class="card" data-reveal>
-                <div class="graphic-container">
-                    <svg viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="70" y="20" width="60" height="110" rx="8" fill="var(--secondary)" />
-                        <rect x="75" y="30" width="50" height="90" rx="2" fill="#222" />
-
-                        <rect x="60" y="50" width="80" height="45" rx="10" fill="var(--surface)" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.1))" />
-                        <circle cx="75" cy="65" r="6" fill="var(--primary-soft)" />
-                        <path d="M72 65 L74 67 L78 63" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <rect x="85" y="60" width="40" height="4" rx="2" fill="var(--text-main)" />
-                        <rect x="85" y="68" width="25" height="3" rx="1.5" fill="var(--text-muted)" />
-
-                        <rect x="68" y="78" width="30" height="10" rx="5" fill="var(--primary)" />
-                        <rect x="102" y="78" width="30" height="10" rx="5" fill="var(--border)" />
-                    </svg>
+                <div class="feature-card glass" data-reveal style="--primary: #263238;">
+                    <span style="font-size: 3rem; margin-bottom: 1.5rem; display: block;">👨‍👩‍👧‍👦</span>
+                    <h3>Family Profiles</h3>
+                    <p>Create separate profiles for children, parents, or elderly relatives. Monitor the entire family's adherence from a single dashboard.</p>
                 </div>
-                <div class="card-icon">🔔</div>
-                <h3>Quick Actions</h3>
-                <ul class="feature-list">
-                    <li><strong>Taken/Skip:</strong> Log your status directly from the notification.</li>
-                    <li><strong>Snooze:</strong> Need 15 more minutes? Snooze with one tap.</li>
-                    <li><strong>Silent Alerts:</strong> Avoid noise with intelligent sound throttling.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Section: Intelligence -->
-        <div id="usage" class="section-header" data-reveal>
-            <h2>Health Intelligence</h2>
-            <p>More than just a reminder app.</p>
-        </div>
-        <div class="grid">
-            <div class="card" data-reveal>
-                <div class="card-icon">📖</div>
-                <h3>Drug Information</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Access detailed information about your medications, including side effects, indications, and warnings.</p>
-            </div>
-            <div class="card" data-reveal>
-                <div class="card-icon">📦</div>
-                <h3>Refill Reminders</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Keep track of remaining doses and get notified when it's time to refill your prescription.</p>
-            </div>
-            <div class="card" data-reveal>
-                <div class="card-icon">💡</div>
-                <h3>Daily Health Tips</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Receive curated wellness tips and reminders to stay hydrated and maintain a healthy lifestyle.</p>
-            </div>
-        </div>
-
-        <!-- Section: Setup Guide -->
-        <div id="setup" class="section-header" data-reveal>
-            <h2>Getting Started</h2>
-            <p>Follow these simple steps to begin your health journey.</p>
-        </div>
-        <div class="setup-wrapper" data-reveal>
-            <div class="step-row">
-                <div class="step-badge">1</div>
-                <div class="step-content">
-                    <h4>Create Your Profile</h4>
-                    <p>Open the app and set up your primary user profile with a name and an icon of your choice.</p>
+                <div class="feature-card glass" data-reveal style="--primary: #00897B;">
+                    <span style="font-size: 3rem; margin-bottom: 1.5rem; display: block;">🛡️</span>
+                    <h3>Biometric Security</h3>
+                    <p>Protect sensitive medical data with industry-standard biometric authentication (Fingerprint, Face Unlock, or PIN).</p>
                 </div>
             </div>
-            <div class="step-row">
-                <div class="step-badge">2</div>
-                <div class="step-content">
-                    <h4>Add Medications</h4>
-                    <p>Tap the <strong>+</strong> button to add a medication. Enter the name, dosage, and set your reminder times.</p>
-                </div>
-            </div>
-            <div class="step-row">
-                <div class="step-badge">3</div>
-                <div class="step-content">
-                    <h4>Enable Notifications</h4>
-                    <p>Ensure notification permissions are granted so you can receive timely reminders even when the app is closed.</p>
-                </div>
-            </div>
-            <div class="step-row">
-                <div class="step-badge">4</div>
-                <div class="step-content">
-                    <h4>Stay Consistent</h4>
-                    <p>Log your doses as you take them to build a clear history of your medication adherence.</p>
-                </div>
-            </div>
-        </div>
+        </section>
 
-    </main>
+        <section class="usage-section">
+            <div style="text-align: center; margin-bottom: 4rem;" data-reveal>
+                <h2 class="section-title">Patient Setup Guide</h2>
+                <p style="color: var(--text-muted);">Take control of your health journey in four simple steps.</p>
+            </div>
 
-    <footer class="footer">
-        <p><strong>Med Reminder</strong> | Your Intelligent Health Companion</p>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="mailto:support@medreminder.com">Support</a>
-        </div>
-        <p style="margin-top: 20px; opacity: 0.5;">Copyright © 2025 Vivek Umrao. All rights reserved.</p>
-    </footer>
+            <div class="guide-container glass" data-reveal>
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="guide-content">
+                        <h4>Create Your Profile</h4>
+                        <p>Open the app and set up your primary profile. You can also add family members with custom icons for easy identification.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="guide-content">
+                        <h4>Add Medications</h4>
+                        <p>Tap <strong>"Add Medicine"</strong>. Use the camera to scan the label or manually enter the details using our intelligent auto-complete.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="guide-content">
+                        <h4>Configure Reminders</h4>
+                        <p>Set precise alarm times. Enable "Post-Reboot Execution" to ensure your schedule is never interrupted by device restarts.</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">4</div>
+                    <div class="guide-content">
+                        <h4>Track & Adjust</h4>
+                        <p>Log your doses as you take them. View the <strong>Adherence Log</strong> to see your progress and identify patterns over time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-tagline">Healing Technology by <span class="highlight">Vivek Umrao</span></div>
+            <div class="footer-meta">
+                &copy; 2025 <span class="dot">•</span> Med Reminder <span class="dot">•</span> v1.0.0
+            </div>
+        </footer>
+    </div>
 
     <script>
-        const reveal = () => {
-            document.querySelectorAll('[data-reveal]').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('visible');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        };
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
+        }, { threshold: 0.1 });
+        document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
