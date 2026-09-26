@@ -3,158 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivek Umrao | Software Engineer & Android Architect</title>
+    <title>Vivek Umrao | Principal Software Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Hero Section -->
         <header class="hero" data-reveal>
-            <div class="profile-container">
-                <img src="assets/profile.jpg" alt="Vivek Umrao" class="profile-img">
-            </div>
-            <div class="hero-content">
-                <h2>Software Engineer</h2>
-                <h1>Vivek Umrao</h1>
-                <p>Specializing in high-performance Android architecture, AI-driven automation, and secure enterprise tools. I bridge the gap between technical complexity and elegant user experiences.</p>
-                <div class="hero-links">
-                    <a href="https://github.com/ervivekumrao" class="btn btn-primary" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/ervivekumrao/" class="btn btn-secondary" target="_blank">LinkedIn</a>
-                </div>
+            <div class="badge">15+ Years of Engineering Excellence</div>
+            <h1 class="hero-title">Hi, I'm Vivek Umrao.</h1>
+            <p class="hero-subtitle">I'm a <b>Principal Software Engineer and Systems Architect</b> with 15 years of experience defined by the intersection of JVM internals, device-level security, and enterprise scale. I build resilient, "under-the-hood" systems that power high-concurrency platforms.</p>
+
+            <div class="btn-group">
+                <a href="https://www.linkedin.com/in/ervivekumrao/" class="btn btn-primary" target="_blank">Connect on LinkedIn</a>
+                <a href="https://github.com/ervivekumrao" class="btn" target="_blank">View GitHub Profile</a>
+                <a href="mailto:vivekumraomain@gmail.com" class="btn">Email Me</a>
             </div>
         </header>
 
-        <section id="expertise" data-reveal>
-            <h2 class="section-title">Core Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">Android (Kotlin/Java)</div>
-                <div class="skill-tag">AI & ML Integration</div>
-                <div class="skill-tag">Enterprise Security</div>
-                <div class="skill-tag">Docker Automation</div>
-                <div class="skill-tag">System Utilities</div>
-                <div class="skill-tag">Full-Stack Java</div>
-                <div class="skill-tag">Performance Tuning</div>
-                <div class="skill-tag">CI/CD & DevOps</div>
+        <!-- Professional Experience Section -->
+        <section id="experience" data-reveal>
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">A track record of delivering impactful enterprise solutions at global scale.</p>
+            </div>
+
+            <div class="experience-log">
+                <div class="log-entry">
+                    <div class="log-header">
+                        <div>
+                            <h3 class="log-title">Principal Software Engineer</h3>
+                            <div class="log-company">Pegasystems</div>
+                        </div>
+                        <div class="log-date">Sep 2021 &mdash; Present</div>
+                    </div>
+                    <div class="log-desc">
+                        <ul>
+                            <li><b>Engine Core Governance:</b> Architecting low-level PEGA Engine internals, focusing on custom class loading, passivation strategies, and high-concurrency locking.</li>
+                            <li><b>Hardened Connectivity:</b> Engineered robust database connectivity pools and resource management layers that underpin the PEGA Infinity platform’s scalability.</li>
+                            <li><b>Distributed API Design:</b> Orchestrated a suite of high-performance RESTful APIs designed for seamless, secure integration across massive client infrastructures.</li>
+                            <li><b>Operational Excellence:</b> Modernized the testing lifecycle with JUnit/Mockito frameworks, reducing regression overhead by 20% and improving system uptime.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="log-entry">
+                    <div class="log-header">
+                        <div>
+                            <h3 class="log-title">Staff Engineer</h3>
+                            <div class="log-company">Samsung</div>
+                        </div>
+                        <div class="log-date">Jul 2011 &mdash; Sep 2021</div>
+                    </div>
+                    <div class="log-desc">
+                        <ul>
+                            <li><b>Security at Scale:</b> Played a fundamental role in the architecture of Knox Guard and Knox Configure, deploying MDM-style security policies to millions of devices globally.</li>
+                            <li><b>Systems R&D:</b> Led proof-of-concept initiatives in mobile security and system optimization, translating R&D efforts into patented innovations for global Samsung variants.</li>
+                            <li><b>Technical Diplomacy:</b> Coordinated complex requirements between international R&D centers, ensuring feature parity while maintaining strict performance benchmarks.</li>
+                            <li><b>Automation Frameworks:</b> Built custom integration testing harnesses that accelerated the transition to Agile delivery within the Samsung mobile ecosystem.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2 class="section-title">Featured Projects</h2>
+        <!-- Core Competencies Section -->
+        <section id="expertise" data-reveal>
+            <div class="section-header">
+                <h2 class="section-title">Core Competencies</h2>
+                <p class="section-subtitle">Technical domain expertise across systems and architecture.</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skill-tag">Java (Expert) & Kotlin</div>
+                <div class="skill-tag">JVM Internals & Class Loading</div>
+                <div class="skill-tag">High-Concurrency Locking</div>
+                <div class="skill-tag">Samsung Knox & MDM</div>
+                <div class="skill-tag">Device Policy Enforcement</div>
+                <div class="skill-tag">PEGA Infinity Engine</div>
+                <div class="skill-tag">Spring Boot</div>
+                <div class="skill-tag">Docker & Kubernetes</div>
+                <div class="skill-tag">RESTful API Architecture</div>
+                <div class="skill-tag">SQL & Database Connection Pooling</div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section (Personal Add-On) -->
+        <section id="projects" data-reveal>
+            <div class="section-header">
+                <h2 class="section-title">Independent R&D / Open Source</h2>
+                <p class="section-subtitle">A portfolio of active tools built in a personal capacity to solve specific engineering bottlenecks.</p>
+            </div>
+
             <div class="bento-grid">
-                <!-- Child Safe - Wide -->
-                <a href="projects/child-safe/index.html" class="bento-item wide glass" data-reveal>
-                    <img src="assets/icons/child_safe.png" alt="Child Safe" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Child Safe</h3>
-                        <p>Advanced parental monitoring with radar-precision tracking and deep system governance.</p>
+                <a href="projects/child-safe/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">🛡️</div>
+                        <h3 class="card-title">Child Safe</h3>
+                        <p class="card-desc">High-precision Android governance tool leveraging Device Policy Enforcement, Room, and Hilt to manage system-level restrictions.</p>
+                        <div class="card-meta">
+                            <span>Android App</span>
+                            <span>MDM Tool</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Career Crox - Wide -->
-                <a href="projects/career-crox/index.html" class="bento-item wide glass" data-reveal>
-                    <img src="assets/icons/career_crox.png" alt="Career Crox" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Career Crox</h3>
-                        <p>Enterprise recruitment automation with real-time CRM sync.</p>
+                <a href="projects/mockup-master/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">🧪</div>
+                        <h3 class="card-title">Mockup Master</h3>
+                        <p class="card-desc">High-fidelity mock data injection tool designed to streamline Android development and QA workflows.</p>
+                        <div class="card-meta">
+                            <span>Developer Tool</span>
+                            <span>Utility</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Mockup Master - Tall -->
-                <a href="projects/mockup-master/index.html" class="bento-item tall glass" data-reveal>
-                    <img src="assets/icons/mockup_master.png" alt="Mockup Master" class="bento-icon" style="background: white;">
-                    <div class="bento-content">
-                        <h3>Mockup Master</h3>
-                        <p>High-fidelity mock data injection for Android dev & QA.</p>
+                <a href="projects/career-crox/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">📈</div>
+                        <h3 class="card-title">Career Crox</h3>
+                        <p class="card-desc">A recruitment automation engine featuring background processing and real-time CRM synchronization.</p>
+                        <div class="card-meta">
+                            <span>Platform</span>
+                            <span>Automation</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Med Reminder - Standard -->
-                <a href="projects/med-reminder/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/med_reminder.png" alt="Med Reminder" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Med Reminder</h3>
-                        <p>Intelligent health companion with smart schedules.</p>
+                <a href="projects/time-span-selector/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">⏱️</div>
+                        <h3 class="card-title">Time Span Selector</h3>
+                        <p class="card-desc">An elegant, open-source radial and linear range selection library built specifically for Material 3 applications.</p>
+                        <div class="card-meta">
+                            <span>Open Source</span>
+                            <span>UI Library</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Time Span Selector -->
-                <a href="projects/time-span-selector/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/time_span_selector.svg" alt="Time Span Selector" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Time Span Selector</h3>
-                        <p>Elegant radial/linear range selection for Material 3 apps.</p>
+                <a href="projects/app-manager/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">📱</div>
+                        <h3 class="card-title">App Manager</h3>
+                        <p class="card-desc">A utility for bloatware control and enterprise compliance, focusing on deep device policy integration.</p>
+                        <div class="card-meta">
+                            <span>Android App</span>
+                            <span>Security</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- App Manager - Standard -->
-                <a href="projects/app-manager/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/app_manager.png" alt="App Manager" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>App Manager</h3>
-                        <p>Device policy enforcement and bloatware control.</p>
+                <a href="projects/med-reminder/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">💊</div>
+                        <h3 class="card-title">Med Reminder</h3>
+                        <p class="card-desc">Intelligent health companion application featuring smart schedules, offline support, and proactive notifications.</p>
+                        <div class="card-meta">
+                            <span>Android App</span>
+                            <span>Health Tech</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Study Companion -->
-                <a href="projects/study-companion/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/study_companion.png" alt="Study Companion" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Study Companion</h3>
-                        <p>AI-driven OCR and intelligent study set generator.</p>
+                <a href="projects/study-companion/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">📚</div>
+                        <h3 class="card-title">Study Companion</h3>
+                        <p class="card-desc">AI-driven OCR and intelligent study set generator built to streamline the learning process.</p>
+                        <div class="card-meta">
+                            <span>Android App</span>
+                            <span>AI / ML</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Office Time Counter -->
-                <a href="projects/office-time-counter/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/office_time.png" alt="Office Time Counter" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Office Time Counter</h3>
-                        <p>Background attendance tracking via notification hooks.</p>
+                <a href="projects/office-time-counter/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">🏢</div>
+                        <h3 class="card-title">Office Time Counter</h3>
+                        <p class="card-desc">Background attendance tracking utility that leverages advanced Android notification hooks.</p>
+                        <div class="card-meta">
+                            <span>Utility</span>
+                            <span>Automation</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Database Creator - Standard -->
-                <a href="projects/database-creator/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/database_creator.svg" alt="Database Creator" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>DB Creator</h3>
-                        <p>Automated Docker-based database orchestration.</p>
+                <a href="projects/database-creator/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">🗄️</div>
+                        <h3 class="card-title">DB Creator</h3>
+                        <p class="card-desc">Automated Docker-based database orchestration and management utility for local development environments.</p>
+                        <div class="card-meta">
+                            <span>DevOps Tool</span>
+                            <span>Docker</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Runtime Compilation -->
-                <a href="projects/runtime-compilation/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/runtime_compilation.svg" alt="Runtime Compilation" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Runtime Compile</h3>
-                        <p>Dynamic Java code execution and class-loading library.</p>
+                <a href="projects/encrypt-tomcat/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">🔐</div>
+                        <h3 class="card-title">Tomcat Encryptor</h3>
+                        <p class="card-desc">Security utility designed for enterprise environments to ensure connection pool credential safety.</p>
+                        <div class="card-meta">
+                            <span>Security Tool</span>
+                            <span>Java Backend</span>
+                        </div>
                     </div>
                 </a>
 
-                <!-- Tomcat Encryptor - Standard -->
-                <a href="projects/encrypt-tomcat/index.html" class="bento-item glass" data-reveal>
-                    <img src="assets/icons/encrypt_tomcat.svg" alt="Tomcat Encryptor" class="bento-icon">
-                    <div class="bento-content">
-                        <h3>Tomcat Encrypt</h3>
-                        <p>Security utility for connection pool credential safety.</p>
+                <a href="projects/runtime-compilation/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3 class="card-title">Runtime Compile</h3>
+                        <p class="card-desc">A dynamic Java execution library built to solve the complexity of on-the-fly code injection and custom class-loading.</p>
+                        <div class="card-meta">
+                            <span>Java Library</span>
+                            <span>JVM Internals</span>
+                        </div>
                     </div>
                 </a>
             </div>
         </section>
 
         <footer>
-            <div class="footer-tagline">
-                Handcrafted by <span class="highlight">Vivek Umrao</span>
-            </div>
-            <div class="footer-meta">
-                <span>© 2026 Portfolio</span>
-                <span class="dot">•</span>
-                <span>Software Engineer</span>
-                <span class="dot">•</span>
-                <span>India</span>
-            </div>
+            <div>Vivek Umrao &mdash; Principal Software Engineer</div>
+            <div>&copy; 2026. All rights reserved.</div>
         </footer>
     </div>
 
+    <!-- Simple Reveal Animation Script -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
