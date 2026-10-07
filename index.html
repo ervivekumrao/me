@@ -12,9 +12,9 @@
         <header class="hero" data-reveal>
             <div class="hero-wrapper">
                 <div class="hero-text">
-                    <div class="badge">15+ Years of Engineering Excellence</div>
+                    <div class="badge"><span class="status-dot"></span> &nbsp; Available for new opportunities</div>
                     <h1 class="hero-title">Hi, I'm Vivek Umrao.</h1>
-                    <p class="hero-subtitle">I'm a <b>Principal Software Engineer and Systems Architect</b> with 15 years of experience defined by the intersection of JVM internals, device-level security, and enterprise scale. I build resilient, "under-the-hood" systems that power high-concurrency platforms.</p>
+                    <p class="hero-subtitle"><i>"Most software engineers build on top of platforms. I build the platforms themselves."</i> As a Principal Software Engineer and Systems Architect with 15+ years of experience, I specialize in JVM internals, enterprise scale, and device-level security.</p>
 
                     <div class="btn-group">
                         <a href="https://www.linkedin.com/in/ervivekumrao/" class="btn btn-primary" target="_blank">Connect on LinkedIn</a>
@@ -24,6 +24,22 @@
                 </div>
                 <div class="hero-image">
                     <img src="assets/profile.jpg" alt="Vivek Umrao">
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar" data-reveal>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Millions</div>
+                    <div class="stat-label">Devices Secured (Knox)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">JVM & Systems</div>
+                    <div class="stat-label">Core Engine Architecture</div>
                 </div>
             </div>
         </header>
@@ -46,10 +62,10 @@
                     </div>
                     <div class="log-desc">
                         <ul>
-                            <li><b>Engine Core Governance:</b> Architecting low-level PEGA Engine internals, focusing on custom class loading, passivation strategies, and high-concurrency locking.</li>
-                            <li><b>Hardened Connectivity:</b> Engineered robust database connectivity pools and resource management layers that underpin the PEGA Infinity platform’s scalability.</li>
-                            <li><b>Distributed API Design:</b> Orchestrated a suite of high-performance RESTful APIs designed for seamless, secure integration across massive client infrastructures.</li>
-                            <li><b>Operational Excellence:</b> Modernized the testing lifecycle with JUnit/Mockito frameworks, reducing regression overhead by 20% and improving system uptime.</li>
+                            <li><b>Classload Priming & Engine Governance:</b> Architecting low-level PEGA Engine internals, introducing classload priming to ensure pods are traffic-ready at startup and eliminate cold starts. Optimized custom class loading, passivation strategies, and high-concurrency locking.</li>
+                            <li><b>Distributed ID Generation & Scalability:</b> Designed a distributed ID generation system that eliminates database bottlenecks across nodes, alongside hardened database connection pools for PEGA Infinity.</li>
+                            <li><b>Security & Hashing Architecture:</b> Drove PII security initiatives to safeguard sensitive customer data in logs/traces and led the migration to a unified hashing framework to future-proof enterprise security.</li>
+                            <li><b>APIs & Operational Excellence:</b> Orchestrated high-performance RESTful APIs and modernized testing with JUnit/Mockito, reducing regression overhead by 20% and improving system uptime.</li>
                         </ul>
                     </div>
                 </div>
@@ -64,10 +80,10 @@
                     </div>
                     <div class="log-desc">
                         <ul>
-                            <li><b>Security at Scale:</b> Played a fundamental role in the architecture of Knox Guard and Knox Configure, deploying MDM-style security policies to millions of devices globally.</li>
-                            <li><b>Systems R&D:</b> Led proof-of-concept initiatives in mobile security and system optimization, translating R&D efforts into patented innovations for global Samsung variants.</li>
-                            <li><b>Technical Diplomacy:</b> Coordinated complex requirements between international R&D centers, ensuring feature parity while maintaining strict performance benchmarks.</li>
-                            <li><b>Automation Frameworks:</b> Built custom integration testing harnesses that accelerated the transition to Agile delivery within the Samsung mobile ecosystem.</li>
+                            <li><b>Security at Scale (Knox Guard):</b> Played a fundamental role in architecting Knox Guard and Knox Configure, deploying system-level MDM security policies to millions of global devices.</li>
+                            <li><b>Patented Innovations & R&D:</b> Led proof-of-concept initiatives in mobile security and system optimization, translating R&D efforts into patented innovations for global Samsung variants.</li>
+                            <li><b>Technical Diplomacy:</b> Coordinated complex requirements between international R&D centers, ensuring feature parity across global markets while maintaining strict performance benchmarks.</li>
+                            <li><b>Agile Automation:</b> Built custom integration testing harnesses that accelerated the transition to Agile delivery within the Samsung mobile ecosystem.</li>
                         </ul>
                     </div>
                 </div>
@@ -78,20 +94,68 @@
         <section id="expertise" data-reveal>
             <div class="section-header">
                 <h2 class="section-title">Core Competencies</h2>
-                <p class="section-subtitle">Technical domain expertise across systems and architecture.</p>
+                <p class="section-subtitle">Technical domain expertise extracted from professional engineering experience.</p>
             </div>
 
-            <div class="skills-container">
-                <div class="skill-tag">Java (Expert) & Kotlin</div>
-                <div class="skill-tag">JVM Internals & Class Loading</div>
-                <div class="skill-tag">High-Concurrency Locking</div>
-                <div class="skill-tag">Samsung Knox & MDM</div>
-                <div class="skill-tag">Device Policy Enforcement</div>
-                <div class="skill-tag">PEGA Infinity Engine</div>
-                <div class="skill-tag">Spring Boot</div>
-                <div class="skill-tag">Docker & Kubernetes</div>
-                <div class="skill-tag">RESTful API Architecture</div>
-                <div class="skill-tag">SQL & Database Connection Pooling</div>
+            <div class="competencies-grid">
+                <div class="competency-card">
+                    <div class="comp-icon">⚡</div>
+                    <h3>Core Systems & JVM</h3>
+                    <div class="comp-tags">
+                        <span>Java (Expert)</span>
+                        <span>Kotlin</span>
+                        <span>JVM Internals</span>
+                        <span>Class Loading</span>
+                        <span>High-Concurrency Locking</span>
+                        <span>Passivation</span>
+                    </div>
+                </div>
+
+                <div class="competency-card">
+                    <div class="comp-icon">🔒</div>
+                    <h3>Mobile Security & MDM</h3>
+                    <div class="comp-tags">
+                        <span>Android SDK</span>
+                        <span>Samsung Knox</span>
+                        <span>Device Policy Enforcement</span>
+                        <span>Biometrics</span>
+                    </div>
+                </div>
+
+                <div class="competency-card">
+                    <div class="comp-icon">☁️</div>
+                    <h3>Backend & Infrastructure</h3>
+                    <div class="comp-tags">
+                        <span>Spring Boot</span>
+                        <span>PEGA Infinity</span>
+                        <span>Kafka</span>
+                        <span>Docker & Kubernetes</span>
+                        <span>RESTful APIs</span>
+                    </div>
+                </div>
+
+                <div class="competency-card">
+                    <div class="comp-icon">💾</div>
+                    <h3>Database & Storage</h3>
+                    <div class="comp-tags">
+                        <span>PostgreSQL & Oracle</span>
+                        <span>SQL Server</span>
+                        <span>Connection Pooling</span>
+                        <span>Resource Management</span>
+                    </div>
+                </div>
+
+                <div class="competency-card">
+                    <div class="comp-icon">🔬</div>
+                    <h3>Testing & CI/CD DevOps</h3>
+                    <div class="comp-tags">
+                        <span>JUnit & Mockito</span>
+                        <span>UI Automator</span>
+                        <span>Git & Jenkins</span>
+                        <span>Gradle & Maven</span>
+                        <span>CI/CD Pipelines</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -139,6 +203,18 @@
                     </div>
                 </a>
 
+                <a href="projects/med-reminder/" style="text-decoration: none; color: inherit;">
+                    <div class="bento-card">
+                        <div class="card-icon">💊</div>
+                        <h3 class="card-title">Med Reminder</h3>
+                        <p class="card-desc">Intelligent health companion application featuring smart schedules, offline support, and proactive notifications.</p>
+                        <div class="card-meta">
+                            <span>Android App</span>
+                            <span>Health Tech</span>
+                        </div>
+                    </div>
+                </a>
+
                 <a href="projects/time-span-selector/" style="text-decoration: none; color: inherit;">
                     <div class="bento-card">
                         <div class="card-icon">⏱️</div>
@@ -159,18 +235,6 @@
                         <div class="card-meta">
                             <span>Android App</span>
                             <span>Security</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="projects/med-reminder/" style="text-decoration: none; color: inherit;">
-                    <div class="bento-card">
-                        <div class="card-icon">💊</div>
-                        <h3 class="card-title">Med Reminder</h3>
-                        <p class="card-desc">Intelligent health companion application featuring smart schedules, offline support, and proactive notifications.</p>
-                        <div class="card-meta">
-                            <span>Android App</span>
-                            <span>Health Tech</span>
                         </div>
                     </div>
                 </a>
