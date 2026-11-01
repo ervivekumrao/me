@@ -5,33 +5,58 @@
 *.ipr
 .idea_modules/
 .vscode/
+*.sublime-project
+*.sublime-workspace
 
 # Build artifacts and dependencies
 build/
 bin/
 out/
+dist/
 .gradle/
 node_modules/
+.cache/
+.parcel-cache/
+.npm/
+.yarn/
 
 # Local configuration and environment
 local.properties
 .env
+*.env
+*.env.*
 .env.local
 .env.*.local
+secrets/
+
+# AI Agent & Workspace Directories
+.agents/
+.gemini/
+skills/
+.claude/
+.cursor/
+scratch/
+.system_generated/
 
 # Key / Secret / Signing files
 *.keystore
 *.jks
 *.pem
 *.key
+*.p12
 
-# Logs and temporary files
+# Logs, crash dumps and temporary files
 *.log
 *.tmp
 *.temp
 *.bak
 *.swp
 *.swo
+*.pid
+*.seed
+*.pid.lock
+hs_err_pid*
+replay_pid*
 
 # OS generated files
 # macOS
